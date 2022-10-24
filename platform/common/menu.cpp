@@ -44,8 +44,8 @@ bool consoleInitialized = false;
 int menu=0;
 int option = -1;
 char printMessage[33];
-int gameScreen=0;
-int singleScreenMode=0;
+int gameScreen=1;
+int singleScreenMode=1;
 int stateNum=0;
 
 bool windowDisabled = false;
@@ -423,10 +423,10 @@ SubMenu menuList[] = {
     },
     {
         "Display",
-        7,
+        5,
         {
-            {"Game Screen", setScreenFunc, 2, {"Top","Bottom"}, 0, MENU_ALL},
-            {"Single Screen", setSingleScreenFunc, 2, {"Off","On"}, 0, MENU_ALL},
+            // {"Game Screen", setScreenFunc, 2, {"Top","Bottom"}, 1, MENU_ALL},
+            // {"Single Screen", setSingleScreenFunc, 2, {"Off","On"}, 1, MENU_ALL},
             {"Scaling", setScaleModeFunc, 3, {"Off","Aspect","Full"}, 0, MENU_DS},
             {"Scale Filter", setScaleFilterFunc, 2, {"Off","On"}, 1, MENU_DS},
             {"SGB Borders", sgbBorderEnableFunc, 2, {"Off","On"}, 1, MENU_ALL},
